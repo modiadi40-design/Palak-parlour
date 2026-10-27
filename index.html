@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="gu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#147d4b">
+  <meta name="description" content="Palak Parlour - દૂધ, દહીં અને છાશ ઘર સુધી">
+  <title>Palak Parlour | પલક પાર્લર</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brandmark" aria-hidden="true">🥛</div>
+    <div>
+      <h1>Palak Parlour</h1>
+      <p>દૂધ • દહીં • છાશ</p>
+    </div>
+    <button class="cart-pill" id="cartTop" aria-label="કાર્ટ પર જાઓ">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">તમારી નજીક, તમારી સેવા</span>
+      <h2>તાજગી હવે તમારા ઘર સુધી!</h2>
+      <p>તમારી પસંદગી કરો, ઓર્ડર આપો અને UPI અથવા ડિલિવરી વખતે રોકડથી ચૂકવો.</p>
+      <div class="hero-tags"><span>✓ સરળ ઓર્ડર</span><span>✓ ઘર સુધી ડિલિવરી</span></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><h2>અમારી વસ્તુઓ</h2><p>તમારી જરૂર મુજબ જથ્થો પસંદ કરો</p></div>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="section cart-section" id="cartSection">
+      <div class="section-heading"><div><h2>તમારો કાર્ટ</h2><p>ઓર્ડર મોકલતા પહેલાં તપાસો</p></div></div>
+      <div id="cartItems" class="cart-items"><p class="muted">હજુ કાર્ટમાં કોઈ વસ્તુ નથી.</p></div>
+      <div class="total-line"><span>કુલ રકમ</span><strong id="total">₹0</strong></div>
+    </section>
+
+    <section class="section order-section">
+      <div class="section-heading"><div><h2>ડિલિવરી વિગતો</h2><p>તમારો ઓર્ડર આપવા માટે વિગતો भरो</p></div></div>
+      <form id="orderForm">
+        <label>તમારું નામ<input name="customerName" required autocomplete="name" placeholder="પૂરું નામ"></label>
+        <label>મોબાઇલ નંબર<input name="phone" required inputmode="tel" pattern="[0-9+\-\s]{10,15}" placeholder="મોબાઇલ નંબર"></label>
+        <label>ડિલિવરીનું સરનામું<textarea name="address" required rows="3" placeholder="ઘર નંબર, સોસાયટી / બિલ્ડિંગ, વિસ્તાર"></textarea></label>
+        <label>પેમેન્ટની રીત
+          <select name="payment" id="payment" required>
+            <option value="upi">UPIથી ચૂકવવું</option>
+            <option value="cod">ડિલિવરી વખતે રોકડ</option>
+          </select>
+        </label>
+        <p class="payment-note" id="paymentNote">ઓર્ડર મોકલ્યા પછી UPI એપ ખોલવા માટે વિકલ્પ મળશે. પેમેન્ટ સફળ થયું છે તેની ખાતરી તમારી UPI એપમાં કરજો.</p>
+        <button class="primary-btn" type="submit">ઓર્ડર WhatsApp પર મોકલો</button>
+      </form>
+      <div id="result" class="result" role="status" aria-live="polite"></div>
+      <p class="smallprint">નોંધ: આ શરૂઆતનું નમૂનાનું વર્ઝન છે. ઓર્ડર તમારા WhatsApp પર મોકલવા માટે નીચેના JavaScriptમાં દુકાનનો WhatsApp નંબર ઉમેરવો જરૂરી છે.</p>
+    </section>
+  </main>
+
+  <footer><strong>Palak Parlour</strong><br>દૂધ • દહીં • છાશ <p>સ્વચ્છતા અને વિશ્વાસ સાથે સેવા</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
